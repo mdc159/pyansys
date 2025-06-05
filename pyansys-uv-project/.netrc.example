@@ -1,0 +1,39 @@
+# Example .netrc file for PyAnsys UV Project
+# Copy this content to ~/.netrc and configure your credentials
+# IMPORTANT: Set permissions with: chmod 600 ~/.netrc
+
+# =============================================================================
+# PRIVATE REPOSITORY AUTHENTICATION
+# =============================================================================
+
+# GitHub with Personal Access Token
+machine github.com
+login your-username
+password ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# GitLab with Personal Access Token  
+machine gitlab.company.com
+login your-username
+password glpat-xxxxxxxxxxxxxxxxxxxx
+
+# Private PyPI Repository
+machine your-private-pypi.com
+login your-username
+password your-api-token
+
+# Artifactory or Nexus Repository
+machine artifacts.company.com
+login your-username
+password your-password
+
+# =============================================================================
+# USAGE NOTES
+# =============================================================================
+# 
+# 1. The .netrc file should be placed in your home directory: ~/.netrc
+# 2. Set strict permissions: chmod 600 ~/.netrc
+# 3. Use personal access tokens instead of passwords when possible
+# 4. For GitHub, the username can be arbitrary when using tokens
+# 5. Some services require specific token formats (like GitLab's glpat- prefix)
+#
+# =============================================================================

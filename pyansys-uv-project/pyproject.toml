@@ -1,0 +1,54 @@
+[project]
+name = "pyansys-uv-project"
+version = "0.1.0"
+description = "PyAnsys installation with uv in virtual environment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyansys[all]==2025.1.dev0",
+]
+
+[project.optional-dependencies]
+# Mirror PyAnsys optional dependencies for complete installation
+mapdl-all = ["ansys-mapdl-reader==0.55.1"]
+fluent-all = ["ansys-fluent-visualization==0.20.0"]
+tools = [
+    "ansys-materials-manager==0.2.3",
+    "ansys-tools-filetransfer==0.1.1",
+    "ansys-tools-local-product-launcher==0.1.1",
+    "ansys-tools-path==0.7.1",
+    "ansys-tools-visualization-interface==0.9.1",
+    "ansys-units==0.6.0",
+    "pyansys-tools-report==0.8.2",
+    "pyansys-tools-versioning==0.6.0",
+    "pyansys-tools-variableinterop==0.1.1",
+]
+all = [
+    # MAPDL - ALL
+    "ansys-mapdl-reader==0.55.1",
+    # FLUENT - ALL
+    "ansys-fluent-visualization==0.20.0",
+    # TOOLS
+    "ansys-materials-manager==0.2.3",
+    "ansys-tools-filetransfer==0.1.1",
+    "ansys-tools-local-product-launcher==0.1.1",
+    "ansys-tools-path==0.7.1",
+    "ansys-tools-visualization-interface==0.9.1",
+    "ansys-units==0.6.0",
+    "pyansys-tools-report==0.8.2",
+    "pyansys-tools-versioning==0.6.0",
+    "pyansys-tools-variableinterop==0.1.1",
+]
+
+[tool.uv]
+# Configure virtual environment in project directory
+dev-dependencies = []
+
+[tool.uv.sources]
+pyansys = { workspace = true }
+# Configure sources for private repositories (example)
+# pyansys = { url = "https://your-private-repo.com/path/to/pyansys" }
+
+# [tool.uv.index]
+# Configure additional package indexes for private repositories
+# extra-index-url = ["https://your-private-repo.com/simple/"]

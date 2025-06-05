@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv init:*)",
+      "Bash(uv venv:*)",
+      "Bash(uv add:*)",
+      "Bash(ls:*)",
+      "Bash(uv run:*)",
+      "Bash(uv pip list:*)",
+      "Bash(bash:*)",
+      "Bash(python:*)",
+      "Bash(sed:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": false
+}

@@ -1,0 +1,58 @@
+# UV Configuration for PyAnsys Project
+# This file configures uv behavior for the project
+
+[pip]
+# Additional package indexes for private repositories
+# extra-index-url = ["https://your-private-repo.com/simple/"]
+
+# Keyring provider for credential management
+keyring-provider = "subprocess"
+
+# Trusted hosts (if using HTTP repositories)
+# trusted-host = ["your-internal-repo.com"]
+
+[cache]
+# Cache directory (relative to project or absolute path)
+dir = ".uv-cache"
+
+[global]
+# Global UV settings
+python-downloads = "automatic"
+link-mode = "copy"  # Better performance on different filesystems
+
+# Timeout settings (in seconds)
+timeout = 300
+
+[tool]
+# Tool-specific configurations
+requirements-txt = "requirements.txt"
+
+# Development dependencies file
+dev-dependencies = "requirements-dev.txt"
+
+[index]
+# Primary package index
+# url = "https://pypi.org/simple/"
+
+# Additional indexes for private packages
+# extra-index-url = [
+#     "https://your-company-pypi.com/simple/",
+#     "https://internal-repo.company.com/pypi/simple/",
+# ]
+
+# Index strategy: first-match or unsafe-best-match
+strategy = "first-match"
+
+[resolution]
+# Dependency resolution strategy
+strategy = "highest"  # or "lowest-direct"
+
+# Pre-release handling
+prerelease = "disallow"  # or "allow", "explicit", "if-necessary"
+
+[build]
+# Build configuration
+backends = ["setuptools", "flit_core", "hatchling", "pdm"]
+
+# Build isolation
+no-build-isolation = false
