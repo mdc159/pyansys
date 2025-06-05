@@ -167,3 +167,7 @@ cython_debug/
 
 # Ignore generated project.json file used by documentation
 doc/source/_static/projects.json
+
+# Ignore PyAnsys wheelhouse directories
+pyansys-v*-wheelhouse-*/
+venv-ansys*/

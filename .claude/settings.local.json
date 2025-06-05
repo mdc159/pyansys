@@ -9,7 +9,13 @@
       "Bash(uv pip list:*)",
       "Bash(bash:*)",
       "Bash(python:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(/mnt/c/Users/mike/AppData/Local/Programs/Python/Python310/python.exe -m venv venv-ansys2023r1)",
+      "Bash(./venv-ansys2023r1/Scripts/python.exe -m pip install -U pip)",
+      "Bash(./venv-ansys2023r1/Scripts/pip.exe install pyansys==2023.1.1 -f \"D:/Users/Mike/Documents/GitHub/pyansys/pyansys-v2023.1.1-wheelhouse-Windows-3.10\" --no-index --upgrade --ignore-installed)",
+      "Bash(./venv-ansys2023r1/Scripts/python.exe -c \"from pyansys import __version__; print(__version__)\")",
+      "Bash(./venv-ansys2023r1/Scripts/python.exe -c \"from pyansys import __version__; print('PyAnsys version:', __version__)\")",
+      "Bash(./venv-ansys2023r1/Scripts/python.exe -c \"import ansys.dpf.core; print('✓ PyDPF imported successfully')\")"
     ]
   },
   "enableAllProjectMcpServers": false
